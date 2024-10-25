@@ -7,20 +7,19 @@ body {
 header {
     background-color: #003366;
     color: #ffffff;
-    padding: 2px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 header h2 {
     margin: 0;
-    
 }
 header p {
     font-size: 10px;
 }
 .logo {
-    width: 200px; /* Adjust the logo size as needed */
+    width: 150px; /* Adjusted the logo size for responsiveness */
     height: auto;
 }
 .container {
@@ -38,6 +37,11 @@ header p {
     width: 200px;
     text-align: center;
     padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .product-card img {
     width: 100%;
@@ -58,4 +62,27 @@ header p {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 1.2em;
+    }
+    header p {
+        font-size: 8px;
+    }
+    .container {
+        padding: 10px;
+    }
 }
